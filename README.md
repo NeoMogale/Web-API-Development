@@ -52,9 +52,13 @@ Endpoints:
 
 ### Telemetry Data
 GET /api/telemetry: Retrieve a list of all telemetry records.
+
 GET /api/telemetry/{id}: Retrieve details of a specific telemetry record.
+
 POST /api/telemetry: Create a new telemetry record.
+
 PATCH /api/telemetry/{id}: Update telemetry details.
+
 DELETE /api/telemetry/{id}: Delete a telemetry record.
 
 ### Authentication
