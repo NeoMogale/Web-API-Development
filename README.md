@@ -88,3 +88,6 @@ https://portal.azure.com/#@nwuac.onmicrosoft.com/resource/subscriptions/ce338ebc
 ### Link to API
 https://cmpg323project2api.azurewebsites.net
 
+### Harvard Referencing
+https://github.com/NeoMogale/CMPG323_PROJECT2_35407972/blob/master/My%20Reference%20List%20for%20Project%202.docx
+
