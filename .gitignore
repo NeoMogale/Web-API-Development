@@ -363,5 +363,7 @@ MigrationBackup/
 FodyWeavers.xsd
 /.gitignore
 
-appsettings.json
+# Ignore appsettings files
+appsettings*.json
+
 
