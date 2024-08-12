@@ -86,5 +86,5 @@ Swagger Integration: The API is documented with Swagger, providing an interactiv
 https://portal.azure.com/#@nwuac.onmicrosoft.com/resource/subscriptions/ce338ebc-7fd9-4e8e-8f30-4ee9ff5ae78a/resourceGroups/rgCMPG323/overview
 
 ### Link to API
-[Add Link to Your Deployed API Here]
+https://cmpg323project2api.azurewebsites.net
 
