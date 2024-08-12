@@ -8,6 +8,7 @@ using Microsoft.EntityFrameworkCore;
 using CMPG323_PROJECT2_35407972.Models;
 using JWTAuthentication.Authentication;
 using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.JsonPatch;
 
 
 namespace CMPG323_PROJECT2_35407972.Controllers
@@ -49,7 +50,7 @@ namespace CMPG323_PROJECT2_35407972.Controllers
 
         //patch method that updates an already existing telemetry entry 
         // PATCH: api/JobTelemetries/5
-        /**[HttpPatch("{id}")]
+        [HttpPatch("{id}")]
         public async Task<IActionResult> PatchJobTelemetry(int id, [FromBody] JsonPatchDocument<JobTelemetry> patchDoc)
         {
             if (patchDoc == null)
@@ -63,7 +64,7 @@ namespace CMPG323_PROJECT2_35407972.Controllers
                 return NotFound();
             }
 
-            patchDoc.ApplyTo(jobTelemetry, ModelState);
+            patchDoc.ApplyTo(jobTelemetry, (Microsoft.AspNetCore.JsonPatch.Adapters.IObjectAdapter)ModelState);
 
             if (!ModelState.IsValid)
             {
@@ -88,7 +89,7 @@ namespace CMPG323_PROJECT2_35407972.Controllers
 
             return NoContent();
         }
-        */
+        
 
         //this DELETE method deletes an already existing Telemtry entry
         //DELETE: api/JobTelemetries/5
@@ -158,7 +159,7 @@ namespace CMPG323_PROJECT2_35407972.Controllers
             return CreatedAtAction("GetJobTelemetry", new { id = jobTelemetry.Id }, jobTelemetry);
         }
 
-        [HttpGet("savings")]
+       [HttpGet("savings")]
         public async Task<ActionResult<SavingsResult>> GetSavingsProject(
      [FromQuery] Guid projectId, // Use Guid type
      [FromQuery] DateTime startDate,
@@ -222,7 +223,7 @@ namespace CMPG323_PROJECT2_35407972.Controllers
 
             return Ok(savings);
         }
-
+        
 
 
     }
