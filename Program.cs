@@ -23,9 +23,8 @@ var builder = WebApplication.CreateBuilder(args);
 // Add services to the container.
 
 builder.Services.AddControllers();
-builder.Services.AddDbContext<ApplicationDbContext>(options => options.UseSqlServer("DefaultConnection"));
-builder.Services.AddDbContext<NWUTechTrendsContext>(options => options.UseSqlServer("DefaultConnection"));
-builder.Services.AddDbContext<ApplicationDbContext>(options => options.UseSqlServer("name=ConnectionStrings:ConnStr"));
+builder.Services.AddDbContext<ApplicationDbContext>(options => options.UseSqlServer(builder.Configuration.GetConnectionString("ConnStr")));
+builder.Services.AddDbContext<NWUTechTrendsContext>(options => options.UseSqlServer(builder.Configuration.GetConnectionString("ConnStr")));
 
 // For Identity  
 builder.Services.AddIdentity<ApplicationUser, IdentityRole>()
