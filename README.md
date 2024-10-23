@@ -1,4 +1,3 @@
-## CMPG323-Project-2-35407972
 ### NWU Tech Trends API Development
 
 ### Overview
